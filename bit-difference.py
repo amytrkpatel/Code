@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
-
+# Testing if github push works in Deloitte Laptop
 # https://practice.geeksforgeeks.org/problems/bit-difference/0
 
 
@@ -29,6 +29,3 @@ for _ in range(t):
         diff += countOnes(i)
 
     print(diff*2)
-
-
-# In[ ]:
