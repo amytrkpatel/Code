@@ -9,12 +9,10 @@ main(){
         int n, k, i, j;
         cin>>n>>k;
         int A[n], P[k];
-        for(i=1; i<=n; i++)
-        {
+        for(i=1; i<=n; i++){
             A[i] = 0;
         }
-        for(j=1; j<=k; j++)
-        {
+        for(j=1; j<=k; j++){
             cin>>P[j];
         }
 
