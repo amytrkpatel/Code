@@ -1,18 +1,22 @@
-#include <stdio.h>
-#include <string.h>
-#include <math.h>
-#include <stdlib.h>
+// https://www.geeksforgeeks.org/neon-number/#:~:text=A%20neon%20number%20is%20a,of%20the%20square%20is%209.
 
-int sumOfDigits(int n){
-   int sum=0;
-    while(n!=0)
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int sumOfDigits(int n)
+{
+    int sum = 0;
+    while (n != 0)
     {
-        sum = sum + n%10;
+        sum = sum + n % 10;
         n /= 10;
     }
     return sum;
 }
-int main() {
+int main()
+{
 
     int n, sum;
     long int square;
@@ -20,7 +24,7 @@ int main() {
     square = n * n;
     sum = sumOfDigits(square);
 
-    if(sum == n)
+    if (sum == n)
         printf("1");
     else
         printf("0");
