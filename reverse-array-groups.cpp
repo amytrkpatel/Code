@@ -1,29 +1,34 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-main(){
+main()
+{
     int t;
-    cin>>t;
-    while(t--){
-       int n, k;
-       cin>>n>>k;
-       
-       int A[n];
-       for(int i =0; i<n; i++){
-       		cin>>A[i];
-	   }
-	   
-	   int l = n/k;
-	   int j = 0;
-	   for( ; l > 0 ; l--, j += k){
-	   		reverse(A+j, A+j+k);
-	   }
-	   
-	   int m = n%k;
-	   reverse(A+j, A+j+m);
-	   
-	   for(int i =0; i<n; i++){
-       		cout<<A[i]<<" ";
-	   }
+    cin >> t;
+    while (t--)
+    {
+        int n, k;
+        cin >> n >> k;
+
+        int A[n];
+        for (int i = 0; i < n; i++)
+        {
+            cin >> A[i];
+        }
+
+        int l = n / k;
+        int j = 0;
+        for (; l > 0; l--, j += k)
+        {
+            reverse(A + j, A + j + k);
+        }
+
+        int m = n % k;
+        reverse(A + j, A + j + m);
+
+        for (int i = 0; i < n; i++)
+        {
+            cout << A[i] << " ";
+        }
     }
 }
 
