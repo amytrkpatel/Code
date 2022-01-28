@@ -1,10 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 # Testing if github push works in Deloitte Laptop
-<<<<<<< HEAD
 #Changed username
-=======
->>>>>>> 1100c9cbbf15c535afad204940ef5502bb653521
 # https://practice.geeksforgeeks.org/problems/bit-difference/0
 
 
