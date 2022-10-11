@@ -5,8 +5,8 @@ int main() {
     int t, n, p1, p2, k, Q;
 	cin>>t;
 	while(t--){
-	    cin>>p1>>p2>>k;
-	    n= p1+p2;
+        cin>>p1>>p2>>k;
+        n= p1+p2;
         Q=n/k;
         if(Q%2 == 0)
             cout<<"CHEF\n";
