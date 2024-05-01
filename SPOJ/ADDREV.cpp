@@ -2,6 +2,7 @@
 /*For each case, print exactly one line containing only one integer - the reversed sum of two reversed numbers. Omit any leading zeros in the output.*/
 
 #include<bits/stdc++.h>
+// #include<iostream>
 using namespace std;
 long reversed(long in){
     long out = 0;
