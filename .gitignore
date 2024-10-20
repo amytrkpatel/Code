@@ -90,6 +90,7 @@ ipython_config.py
 !.vscode/launch.json
 !.vscode/extensions.json
 *.code-workspace
+.DS_Store
 
 # Local History for Visual Studio Code
 .history/
