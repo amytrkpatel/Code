@@ -26,9 +26,8 @@
 #? Time Complexity :> https://www.timecomplexity.ai/
 """
 
-# ! Approach 1: Brute Force
 class Solution:
-    def armstrongNumber(self,n):
+    def armstrongNumber(self,n): # ! Approach 1: Brute Force
         import math
         #write your code here
         power = math.floor(math.log10(n)+1)
