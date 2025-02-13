@@ -25,7 +25,7 @@ Constraints:
 
 class Solution:
     def printNos(self, N):
-        #Base Case: when N = 1, print 1
+        #Base Case: when N = 1, print 1 and return
         if N == 1:
             print(1, end = ' ')
             return
