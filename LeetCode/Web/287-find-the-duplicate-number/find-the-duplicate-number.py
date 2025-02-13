@@ -1,15 +1,7 @@
 class Solution:
     def findDuplicate(self, nums: List[int]) -> int:
-        slow, fast = 0, 0
-        while True:
-            slow = nums[slow]
-            fast = nums[nums[fast]]
-            if slow == fast:
-                break
-
-        slow = 0
-        while slow != fast:
-            slow = nums[slow]
-            fast = nums[fast]
-        
-        return slow
+        nums_hashed = {}
+        for num in nums:
+            if num in nums_hashed:
+                return num  # Found the duplicate
+            nums_hashed[num] = 1  # Mark it as seen
