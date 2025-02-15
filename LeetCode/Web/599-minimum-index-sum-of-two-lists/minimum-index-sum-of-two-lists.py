@@ -1,37 +1,28 @@
 class Solution:
     def findRestaurant(self, list1: List[str], list2: List[str]) -> List[str]:
-        print(list1)
-        print(list2)
-        
-        dictnary = {}
+        dictnary = {}  # Stores word -> sum of indices
         min_index_sum = float('inf')
-        common_key = []
-
-        for i in range(len(list1)):
-            if list1[i] in list2:
-                dictnary[list1[i]] = [i]
+        common_keys = []
         
-        print(dictnary)
+        set_list2 = set(list2)  # Convert list2 to set for O(1) lookup
 
-        for i in range(len(list2)):
-            if list2[i] in list1:
-                if list2[i] in dictnary.keys():
-                    dictnary[list2[i]].append(i)
-                else:
-                    dictnary[list1[i]] = [i]
-        print(dictnary)
+        # Store indices of common words from list1
+        for i, word in enumerate(list1):
+            if word in set_list2:
+                dictnary[word] = [i]  # Initialize dictionary with index
+        
+        # Update dictionary with indices from list2
+        for i, word in enumerate(list2):
+            if word in dictnary:
+                dictnary[word].append(i)  # Append second index
 
-        for key, value in dictnary.items():
-            if sum(dictnary[key]) < min_index_sum:
-                print(f"sum of {dictnary[key]} = {sum(dictnary[key])} which is <= {min_index_sum}")
-                common_key = [key]
-                print(f"common_key = {common_key}")
-                min_index_sum = sum(dictnary[key])
-                print(f"min_index_sum = {min_index_sum}")
-            elif sum(dictnary[key]) == min_index_sum:
-                common_key.append(key)
-                min_index_sum = sum(dictnary[key])
-                print(f"common_key = {common_key}")
-                min_index_sum = sum(dictnary[key])
-                print(f"min_index_sum = {min_index_sum}")
-        return common_key
+        # Find minimum index sum
+        for key, indices in dictnary.items():
+            index_sum = sum(indices)  # Compute sum once
+            if index_sum < min_index_sum:
+                min_index_sum = index_sum
+                common_keys = [key]  # Reset list with new minimum
+            elif index_sum == min_index_sum:
+                common_keys.append(key)  # Append if equal
+
+        return common_keys
