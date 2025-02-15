@@ -3,7 +3,7 @@ class Solution:
         if len(strs) == 0:
             return [strs]
         
-        dict_of_anagrams = defaultdict(str)
+        dict_of_anagrams = {}
         
         for i in range(0, len(strs)):
             if ''.join(sorted(strs[i])) not in dict_of_anagrams.keys():
