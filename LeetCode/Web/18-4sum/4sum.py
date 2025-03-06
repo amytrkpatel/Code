@@ -4,9 +4,10 @@ class Solution:
         result = []
 
         for i in range(0,len(nums)-3):
+            if nums[i] > target and nums[i] > 0:
+                break  # No need to check further if nums[i] is already too large
             if i > 0 and nums[i] == nums[i - 1]:
                 continue
-
             for j in range(i+1, len(nums)-2):
                 if j > i+1 and nums[j] == nums[j - 1]:
                     continue
