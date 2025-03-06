@@ -8,7 +8,7 @@ class Solution:
                 continue
 
             for j in range(i+1, len(nums)-2):
-                if j > i+1 and nums[j] == nums[j-1]:
+                if j > i+1 and nums[j] == nums[j - 1]:
                     continue
                               
                 left, right = j + 1, len(nums)-1
